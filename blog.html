@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmet Six</title>
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-serif">
+
+    <div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-200 w-[90%] mx-auto my-10">
+        <div class="collapse-title text-2xl font-bold">
+            Discuss the scope of var, let, and const
+        </div>
+        <div class="collapse-content">
+            <h2 class="text-xl font-bold">Var:</h2>
+            <p>Function-scoped or globally scoped (if defined outside of a function) are the two options for scope.</p>
+            <p>Hoisting: Variables declared with the var keyword are raised to the top of the global or function scope
+                in which they are used. This implies that you have access to them even before they are declared in the
+                code.</p>
+            <p>Re-declaration: Variables declared using the var keyword can be redeclared without causing any issues
+                inside the same scope.</p>
+            <p>Re-declaration: Variables declared using the var keyword can be redeclared without causing any issues
+                inside the same scope.</p>
+
+            <h2 class="text-xl font-bold">Let:</h2>
+            <p>Variable hoisting: Let-declared variables are hoisted but not initialized. If you attempt to access them
+                prior to their declaration, you will see a "Temporal Dead Zone" error.</p>
+            <p>Re-declaration: Let-declared variables are not permitted to be declared again within the same scope.</p>
+            <h2 class="text-xl font-bold">Const:</h2>
+            <p>Const variables are hoisted but not initialized, similar to let variables. If accessed before
+                declaration, this results in a "Temporal Dead Zone" problem.</p>
+            <p>Re-declaration: After initialization, variables declared with const cannot be re-declared or reassigned.
+            </p>
+            <p>Const variables cannot be changed, however if they are an object or an array, they can still have their
+                attributes or elements changed.</p>
+        </div>
+    </div>
+    <div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-200 w-[90%] mx-auto my-10">
+        <div class="collapse-title text-2xl font-bold">
+            Tell us the use cases of null and undefined
+        </div>
+        <div class="collapse-content">
+            <h2 class="text-xl font-bold">undefined:</h2>
+            <p>A primitive value called "undefined" represents a variable that has been declared but hasn't been given a
+                value.</p>
+            <p>Use Cases:-</p>
+            <p>once a variable has been declared but not yet given a value. <br>
+                as the function parameter's default value. <br>
+                when a component of an array or an object doesn't exist.</p>
+            <h2 class="text-xl font-bold">null:</h2>
+            <p>null is also a primitive value that represents the intentional absence of any value or an empty value.
+            </p>
+            <p>Use Cases:-</p>
+            <p>when you want to show that a variable or property should be empty or is being used on purpose. <br>
+                whenever you want to empty a variable or property.</p>
+        </div>
+    </div>
+
+    <div tabindex="0" class="collapse collapse-open border border-base-300 bg-base-200 w-[90%] mx-auto my-10">
+        <div class="collapse-title text-2xl font-bold">
+            What do you mean by REST API?
+        </div>
+        <div class="collapse-content">
+            <p>"Representational State Transfer" (REST) is an acronym for "Representational State Transfer," and a REST
+                API (Application Programming Interface) is a set of guidelines and conventions for creating and
+                utilizing web services that follow these guidelines. REST is an architectural design approach for
+                creating stateless client-server interactions in networked systems, especially web services.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

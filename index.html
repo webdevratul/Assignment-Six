@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Six</title>
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="./images/fav-icon.png" type="image/x-icon">
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="font-serif">
+
+    <!-- header section start here -->
+    <header>
+        <!-- navbar start herer -->
+        <nav class="flex flex-col md:flex-row justify-between w-[90%] py-10 items-center mx-auto">
+            <div>
+                <img src="./images/Logo.png" alt="">
+            </div>
+            <div>
+                <button class="bg-gray-200 py-2 px-10 rounded-md text-xl font-bold my-5 md:my-0">Sort by view</button>
+            </div>
+            <div>
+                <button class="bg-[#FF1F3D] py-2 px-6 text-xl rounded-md font-bold text-white"><a
+                        href="./blog.html">Blog</a></button>
+            </div>
+        </nav>
+        <!-- navbar end herer -->
+
+        <!-- horaizontal line -->
+        <div class="w-[90%] h-[1px] bg-slate-300 mx-auto"></div>
+    </header>
+    <!-- header section end here -->
+
+    <!-- main section start here -->
+    <main>
+        <!-- categories item start -->
+        <div class="grid grid-cols-2 md:flex md:justify-center my-10">
+            <button class="bg-[#FF1F3D] py-2 px-8 mx-2 my-2 rounded-md text-white">All</button>
+            <button class="bg-gray-200 py-2 px-8 mx-2 my-2 rounded-md">Music</button>
+            <button class="bg-gray-200 py-2 px-8 mx-2 my-2 rounded-md">Comedy</button>
+            <button class="bg-gray-200 py-2 px-8 mx-2 my-2 rounded-md">Drawing</button>
+        </div>
+        <!-- categories item end -->
+
+        <!-- categories content start -->
+        <div
+            class="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-[90%] mx-auto gap-8">
+            <div>
+                <img class="rounded-md w-full h-auto" src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="">
+                <div class="flex items-center">
+                    <img class="rounded-full w-[40px]" src="https://i.ibb.co/fDbPv7h/Noha.jpg" alt="">
+                    <h2 class="ml-4 mt-4 font-bold text-xl">Building a Winning UX Strategy <br> Using the Kano Model
+                    </h2>
+                </div>
+                <div class="flex items-center ml-14">
+                    <h4 class="text-[17px]">Awlad Hossain</h4>
+                    <img class="h-4 ml-2 my-3" src="./images/verified.png" alt="">
+                </div>
+                <p class="ml-14 text-[17px]">91k views</p>
+            </div>
+        </div>
+        <!-- categories content end -->
+    </main>
+    <!-- main section end here -->
+
+    <!-- footer section start here -->
+    <footer></footer>
+    <!-- footer section end here -->
+
+    <!-- custom js link -->
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
