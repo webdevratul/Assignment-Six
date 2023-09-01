@@ -20,6 +20,7 @@ let displayCategories = (categories) => {
     });
 }
 
+// handle categories function
 let handleCategories = (categorieId) => {
     loadAllData(categorieId);
 }
@@ -33,31 +34,60 @@ let loadAllData = async (categorieId = "1000") => {
     let data = await res.json();
     let allData = data.data;
     let status = data.status;
+
     // call displayAllData function
     displayAllData(allData, status);
+
+    // get sort-by-views btn and call agin displayData for sorting
+    document.getElementById("sort-by-views").addEventListener("click", () => {
+        displayAllData(allData, true, true);
+    });
 }
 
-let displayAllData = (allData, status) => {
+
+let displayAllData = (allData, status, sortByViews) => {
+
     let emptyContainer = document.getElementById("empty-container");
     emptyContainer.innerHTML = "";
     let displayAllData = document.getElementById("display-data-container");
     displayAllData.innerHTML = "";
+
+
     if (status == true) {
+
+        // sort the value depends on views
+        if (sortByViews) {
+            allData.sort((a, b) => parseInt(b.others.views, 10) - parseInt(a.others.views, 10));
+        }
+
         allData.forEach(data => {
             let displayData = document.createElement("div");
+
+            let dateTime = data?.others?.posted_date;
+
+            // convert seconds to hours and minutes
+            let hours = Math.floor(dateTime / 3600);
+            let seconds = dateTime % 3600;
+            let minutes = Math.floor(seconds / 60);
+            let NewDateTime = `${hours}hrs ${minutes} minutes ago`
+            let numericValue = parseFloat(NewDateTime);
+
+
             displayData.innerHTML = `
                 <div>
-                    <img class="rounded-md w-full h-[250px] shadow-lg" src="${data?.thumbnail}" alt="">
-                    <div class="flex items-center">
-                        <img class="rounded-full w-[40px]" src="https://i.ibb.co/fDbPv7h/Noha.jpg" alt="">
-                        <h2 class="ml-4 mt-4 font-bold text-xl">Building a Winning UX Strategy <br> Using the Kano Model
-                        </h2>
+                    <div class="relative" id="image-container">
+                        <img class="rounded-md w-[400px] h-[250px] shadow-lg" src="${data?.thumbnail}" alt="no image found">
+                        <small class="font-mono absolute top-[80%] right-4 bg-[#363636] py-1 text-white rounded-md ">${numericValue === 0 ? "" : NewDateTime}</small>
+                    </div>
+                    <div class="flex items-center mt-4">
+                        <img class="rounded-full w-[40px] h-[40px]" src="${data.authors[0].profile_picture}" alt="no image found">
+                        <h2 class="ml-4 font-bold text-2xl">${data?.title}</h2>
                     </div>
                     <div class="flex items-center ml-14">
                         <h4 class="text-[17px]">${data?.authors[0].profile_name}</h4>
                         <img class="h-4 ml-2 my-3" src="${data.authors[0]?.verified ? './images/verified.png' : ''}"" alt="">
                     </div>
-                    <p class="ml-14 text-[17px]">${data?.others.views}</p>
+                    <p class="ml-14 text-[17px] font-mono">${data?.others.views}</p>
             </div>
             `
             displayAllData.appendChild(displayData);
@@ -71,6 +101,7 @@ let displayAllData = (allData, status) => {
        `
     }
 }
+
 
 // call loadAllData
 loadAllData();
