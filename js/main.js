@@ -74,16 +74,16 @@ let displayAllData = (allData, status, sortByViews) => {
 
 
             displayData.innerHTML = `
-                <div>
+                <div class="p-4 bg-white rounded-lg shadow-md">
                     <div class="relative" id="image-container">
                         <img class="rounded-md w-[400px] h-[250px] shadow-lg" src="${data?.thumbnail}" alt="no image found">
                         <small class="font-mono absolute top-[80%] right-4 bg-[#363636] py-1 text-white rounded-md ">${numericValue === 0 ? "" : NewDateTime}</small>
                     </div>
-                    <div class="flex items-center mt-4">
+                    <div class="flex items-center mt-8">
                         <img class="rounded-full w-[40px] h-[40px]" src="${data.authors[0].profile_picture}" alt="no image found">
                         <h2 class="ml-4 font-bold text-2xl">${data?.title}</h2>
                     </div>
-                    <div class="flex items-center ml-14">
+                    <div class="flex items-center ml-14 mt-2">
                         <h4 class="text-[17px]">${data?.authors[0].profile_name}</h4>
                         <img class="h-4 ml-2 my-3" src="${data.authors[0]?.verified ? './images/verified.png' : ''}"" alt="">
                     </div>
