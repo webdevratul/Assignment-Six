@@ -41,31 +41,16 @@
     <!-- main section start here -->
     <main>
         <!-- categories item start -->
-        <div class="grid grid-cols-2 md:flex md:justify-center my-10">
-            <button class="bg-[#FF1F3D] py-2 px-8 mx-2 my-2 rounded-md text-white">All</button>
-            <button class="bg-gray-200 py-2 px-8 mx-2 my-2 rounded-md">Music</button>
-            <button class="bg-gray-200 py-2 px-8 mx-2 my-2 rounded-md">Comedy</button>
-            <button class="bg-gray-200 py-2 px-8 mx-2 my-2 rounded-md">Drawing</button>
+        <div class="grid grid-cols-2 justify-items-center md:flex md:justify-center my-10" id="categories-container">
         </div>
         <!-- categories item end -->
 
         <!-- categories content start -->
-        <div
-            class="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-[90%] mx-auto gap-8">
-            <div>
-                <img class="rounded-md w-full h-auto" src="https://i.ibb.co/L1b6xSq/shape.jpg" alt="">
-                <div class="flex items-center">
-                    <img class="rounded-full w-[40px]" src="https://i.ibb.co/fDbPv7h/Noha.jpg" alt="">
-                    <h2 class="ml-4 mt-4 font-bold text-xl">Building a Winning UX Strategy <br> Using the Kano Model
-                    </h2>
-                </div>
-                <div class="flex items-center ml-14">
-                    <h4 class="text-[17px]">Awlad Hossain</h4>
-                    <img class="h-4 ml-2 my-3" src="./images/verified.png" alt="">
-                </div>
-                <p class="ml-14 text-[17px]">91k views</p>
-            </div>
+        <div class="grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-[90%] mx-auto gap-8 py-10"
+            id="display-data-container">
         </div>
+
+        <div id="empty-container"></div>
         <!-- categories content end -->
     </main>
     <!-- main section end here -->
